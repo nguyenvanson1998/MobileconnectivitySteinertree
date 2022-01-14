@@ -1,0 +1,73 @@
+_________TestCase: 1______________
+_________TestCase: 1______________
+best num node = 28
+num.Node = 27.99999999999999 
+avg_time = 0.07584747076034547 
+_________TestCase: 2______________
+best num node = 7
+num.Node = 7.299999999999999 
+avg_time = 0.009424829483032224 
+_________TestCase: 3______________
+best num node = 2
+num.Node = 2.0000000000000004 
+avg_time = 0.0007979154586791992 
+_________TestCase: 4______________
+best num node = 8
+num.Node = 8.000000000000002 
+avg_time = 0.012366437911987304 
+_________TestCase: 5______________
+best num node = 13
+num.Node = 13.000000000000004 
+avg_time = 0.013414263725280763 
+_________TestCase: 6______________
+best num node = 11
+num.Node = 12.599999999999998 
+avg_time = 0.01346547603607178 
+_________TestCase: 7______________
+best num node = 6
+num.Node = 5.999999999999998 
+avg_time = 0.0051105737686157225 
+_________TestCase: 8______________
+best num node = 13
+num.Node = 13.000000000000004 
+avg_time = 0.01371924877166748 
+_________TestCase: 9______________
+best num node = 11
+num.Node = 12.9 
+avg_time = 0.01492316722869873 
+_________TestCase: 10______________
+best num node = 66
+num.Node = 65.99999999999997 
+avg_time = 0.40446482896804814 
+_________TestCase: 11______________
+best num node = 28
+num.Node = 27.99999999999999 
+avg_time = 0.061792969703674316 
+_________TestCase: 12______________
+best num node = 19
+num.Node = 18.999999999999993 
+avg_time = 0.010315334796905516 
+_________TestCase: 13______________
+best num node = 16
+num.Node = 16.350000000000005 
+avg_time = 0.04561245441436767 
+_________TestCase: 14______________
+best num node = 34
+num.Node = 33.99999999999999 
+avg_time = 0.06393086910247803 
+_________TestCase: 15______________
+best num node = 46
+num.Node = 45.999999999999986 
+avg_time = 0.06908748149871827 
+_________TestCase: 16______________
+best num node = 11
+num.Node = 11.000000000000002 
+avg_time = 0.0385008454322815 
+_________TestCase: 17______________
+best num node = 35
+num.Node = 35.0 
+avg_time = 0.10098112821578979 
+_________TestCase: 18______________
+best num node = 40
+num.Node = 40.0 
+avg_time = 0.038154757022857665 

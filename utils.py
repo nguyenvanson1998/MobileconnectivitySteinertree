@@ -16,14 +16,14 @@ def read_file(in_path: str):
                 cars.append(tuple([float(x) for x in f.readline().split()] + [m, k]))
         return W,H, BS, M, R, K, cars
 
-def distance(X:tuple, Y:tuple):
+def distance(X, Y):
     return math.sqrt((X[0] - Y[0])*(X[0] - Y[0]) + (X[1] - Y[1])*(X[1] - Y[1]))
 
 def square_distance(X:tuple, Y:tuple):
     return (X[0] - Y[0])*(X[0] - Y[0]) + (X[1] - Y[1])*(X[1] - Y[1])
 
-def check_inside(circle: tuple, p: tuple, r_c ):
-    if( square_distance(circle, p) < r_c*r_c + eps):
+def check_inside(circle, p, r_c ):
+    if( distance(circle, p) <= 2*r_c + eps):
         return True
     else:
         return False

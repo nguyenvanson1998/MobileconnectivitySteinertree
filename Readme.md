@@ -10,3 +10,6 @@ Input:
 
 OutPut:
     List of relay node R adding to make the connectivity each period with base station
+
+install thư viện tính toán steiner py
+link thư viện: https://github.com/Kchour/steinerpy/tree/lexiographic

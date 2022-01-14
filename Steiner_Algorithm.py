@@ -1,3 +1,4 @@
+from cmath import sqrt
 from os import terminal_size
 import numpy as np
 import networkx as nx
@@ -5,7 +6,34 @@ import math
 from networkx.algorithms.shortest_paths import weighted
 from networkx.algorithms.approximation.steinertree import steiner_tree
 import matplotlib.pyplot as plt
+
+from concurrent import futures
+from concurrent.futures import ProcessPoolExecutor, process
+from multiprocessing import Manager, managers
 eps = np.finfo(float).eps
+
+
+
+def get_edges(cid:int, edges, points,Uw, Uh, R):
+    edge_nodes = []
+    for i in range(len(points)):
+        if i != cid and connectable(cid, i, points, Uw, Uh, R):
+            edge_nodes.append(i)
+    edges.append(edge_nodes)
+    return edge_nodes
+
+
+
+def connectable(cid1: int, cid2: int, points, Uw, Uh, R):
+    if cid1 == cid2:
+        return False
+    if min(cid1, cid2) > Uw*Uh and points[cid1][3] != points[cid2][3]:
+        return False
+    p1 = points[cid1]
+    p2 = points[cid2]
+    return (p1[0] - p2[0])**2 + (p1[1] - p2[1])**2 <= 4*R*R + 0.001
+
+
 
 def read_file(in_path: str):
     with open(in_path, "r") as f:
@@ -23,7 +51,7 @@ def read_file(in_path: str):
 def solve(in_path: str):
     NUM_NODE = 0
     W, H, BS, M, R, K, cars = read_file(in_path)
-    D = R*math.sqrt(2)/2
+    D = R
     Uw = math.ceil(W/D)
     Uh = math.ceil(H/D)
 
@@ -46,32 +74,27 @@ def solve(in_path: str):
     for i in range(len(cars)):
         points.append(cars[i] + tuple([NUM_NODE]))
         NUM_NODE +=1
+ 
 
-    def connectable(cid1: int, cid2: int):
-        if cid1 == cid2:
-            return False
-        if min(cid1, cid2) > Uw*Uh and points[cid1][3] != points[cid2][3]:
-            return False
-        p1 = points[cid1]
-        p2 = points[cid2]
-        return (p1[0] - p2[0])**2 + (p1[1] - p2[1])**2 <= 4*R*2 + 0.001
 
-    def get_edges(cid:int):
-        edge_nodes = []
-        for i in range(len(points)):
-            if i != cid and connectable(cid, i):
-                edge_nodes.append(i)
-        return edge_nodes
 
-    edges = []
+
+    global process_pool
+    process_pool = ProcessPoolExecutor(max_workers=16)   
+    edges =  Manager().list()
+    futures = []
     for i in range(len(points)):
-        edges.append(get_edges(i))
+        futures.append(process_pool.submit(get_edges, i , edges, points,Uw, Uh, R) )
+    for f in futures:
+        f.result()
+    print("Done get i")
     
+
     # build model
     pos = {}
     for i in range(len(points)):
         pos[i] = (points[i][0], points[i][1])
-    
+    print("Done reading File")
     G = nx.Graph()
     for i in range(len(edges)):
         for j in range(len(edges[i])):
@@ -90,4 +113,5 @@ def solve(in_path: str):
     # plt.show()
 
 if __name__ == '__main__':
-    solve('./Test/Test2_10_24_50.inp')
+    #solve('./Test/Test2_10_24_50.inp')
+    solve('./Testmip/Test5.inp')

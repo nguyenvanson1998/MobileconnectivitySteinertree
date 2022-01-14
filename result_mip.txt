@@ -1,0 +1,261 @@
+_________TestCase: 1______________
+best num node = 10
+num.Node = 10.85 
+avg_time = 0.014514505863189697 
+_________TestCase: 2______________
+best num node = 2
+num.Node = 2.0000000000000004 
+avg_time = 0.0002505779266357422 
+_________TestCase: 3______________
+best num node = 0
+num.Node = 0.0 
+avg_time = 0.0003481626510620117 
+_________TestCase: 4______________
+best num node = 4
+num.Node = 4.000000000000001 
+avg_time = 0.0023421406745910644 
+_________TestCase: 5______________
+best num node = 2
+num.Node = 2.0000000000000004 
+avg_time = 0.00029923915863037107 
+_________TestCase: 6______________
+best num node = 2
+num.Node = 2.0000000000000004 
+avg_time = 0.00039902925491333005 
+_________TestCase: 7______________
+best num node = 4
+num.Node = 4.000000000000001 
+avg_time = 0.002294063568115235 
+_________TestCase: 8______________
+best num node = 2
+num.Node = 2.0000000000000004 
+avg_time = 0.0003506064414978028 
+_________TestCase: 9______________
+best num node = 3
+num.Node = 2.999999999999999 
+avg_time = 0.0015450119972229006 
+_________TestCase: 10______________
+best num node = 35
+num.Node = 35.0 
+avg_time = 0.09706840515136719 
+_________TestCase: 11______________
+best num node = 17
+num.Node = 16.999999999999996 
+avg_time = 0.013211357593536378 
+_________TestCase: 12______________
+best num node = 5
+num.Node = 5.3 
+avg_time = 0.0033421874046325683 
+_________TestCase: 13______________
+best num node = 8
+num.Node = 8.000000000000002 
+avg_time = 0.007678699493408203 
+_________TestCase: 14______________
+best num node = 20
+num.Node = 20.0 
+avg_time = 0.016059720516204835 
+_________TestCase: 15______________
+best num node = 22
+num.Node = 22.400000000000002 
+avg_time = 0.015114653110504148 
+_________TestCase: 16______________
+best num node = 5
+num.Node = 5.0 
+avg_time = 0.007730758190155029 
+_________TestCase: 17______________
+best num node = 20
+num.Node = 20.850000000000005 
+avg_time = 0.016957521438598633 
+_________TestCase: 18______________
+best num node = 17
+num.Node = 20.85 
+avg_time = 0.011571228504180912 
+_________TestCase: 1______________
+best num node = 22
+num.Node = 22.000000000000004 
+avg_time = 0.07644917964935302 
+_________TestCase: 2______________
+best num node = 3
+num.Node = 4.6000000000000005 
+avg_time = 0.0038918972015380858 
+_________TestCase: 3______________
+best num node = 0
+num.Node = 0.0 
+avg_time = 0.00030059814453125 
+_________TestCase: 4______________
+best num node = 7
+num.Node = 6.999999999999997 
+avg_time = 0.00334242582321167 
+_________TestCase: 5______________
+best num node = 2
+num.Node = 3.65 
+avg_time = 0.0022448301315307617 
+_________TestCase: 6______________
+best num node = 3
+num.Node = 2.999999999999999 
+avg_time = 0.001347959041595459 
+_________TestCase: 7______________
+best num node = 6
+num.Node = 5.999999999999998 
+avg_time = 0.0032421946525573735 
+_________TestCase: 8______________
+best num node = 3
+num.Node = 4.05 
+avg_time = 0.004090726375579834 
+_________TestCase: 9______________
+best num node = 5
+num.Node = 7.4 
+avg_time = 0.005185151100158692 
+_________TestCase: 10______________
+best num node = 58
+num.Node = 57.99999999999998 
+avg_time = 0.4209737777709961 
+_________TestCase: 11______________
+best num node = 26
+num.Node = 26.000000000000007 
+avg_time = 0.03555679321289062 
+_________TestCase: 12______________
+best num node = 7
+num.Node = 8.100000000000001 
+avg_time = 0.006321656703948974 
+_________TestCase: 13______________
+best num node = 13
+num.Node = 13.000000000000004 
+avg_time = 0.022591876983642577 
+_________TestCase: 14______________
+best num node = 29
+num.Node = 28.99999999999999 
+avg_time = 0.033461844921112066 
+_________TestCase: 15______________
+best num node = 34
+num.Node = 33.99999999999999 
+avg_time = 0.027323198318481443 
+_________TestCase: 16______________
+best num node = 9
+num.Node = 9.0 
+avg_time = 0.019808924198150637 
+_________TestCase: 17______________
+best num node = 30
+num.Node = 30.0 
+avg_time = 0.04557944536209107 
+_________TestCase: 18______________
+best num node = 31
+num.Node = 31.00000000000001 
+avg_time = 0.021693217754364013 
+_________TestCase: 12______________
+best num node = 6
+num.Node = 7.3 
+avg_time = 0.004837000370025634 
+_________TestCase: 13______________
+best num node = 11
+num.Node = 11.000000000000002 
+avg_time = 0.014810347557067872 
+_________TestCase: 14______________
+best num node = 24
+num.Node = 23.999999999999993 
+avg_time = 0.02398568391799927 
+_________TestCase: 15______________
+best num node = 27
+num.Node = 27.00000000000001 
+avg_time = 0.022539091110229493 
+_________TestCase: 16______________
+best num node = 7
+num.Node = 6.999999999999997 
+avg_time = 0.010622739791870119 
+_________TestCase: 17______________
+best num node = 22
+num.Node = 22.000000000000004 
+avg_time = 0.020843911170959472 
+_________TestCase: 18______________
+best num node = 28
+num.Node = 28.64999999999999 
+avg_time = 0.014660322666168209 
+_________TestCase: 19______________
+_________TestCase: 12______________
+best num node = 2768
+num.Node = 2783.0 
+avg_time = 28.916739583015442 
+_________TestCase: 13______________
+best num node = 987
+num.Node = 996.0 
+avg_time = 6.007039427757263 
+_________TestCase: 14______________
+best num node = 503
+num.Node = 505.5 
+avg_time = 3.307522416114807 
+_________TestCase: 15______________
+best num node = 390
+num.Node = 392.5 
+avg_time = 2.8107446432113647 
+_________TestCase: 16______________
+best num node = 272
+num.Node = 278.0 
+avg_time = 2.7397533655166626 
+_________TestCase: 17______________
+best num node = 177
+num.Node = 179.0 
+avg_time = 2.420480251312256 
+_________TestCase: 18______________
+best num node = 139
+num.Node = 142.5 
+avg_time = 2.48011577129364 
+_________TestCase: 19______________
+best num node = 114
+num.Node = 114.0 
+avg_time = 2.496319890022278 
+_________TestCase: 20______________
+best num node = 83
+num.Node = 83.5 
+avg_time = 2.3685630559921265 
+_________TestCase: 21______________
+best num node = 76
+num.Node = 78.0 
+avg_time = 2.4286080598831177 
+_________TestCase: 22______________
+best num node = 62
+num.Node = 67.0 
+avg_time = 2.3939138650894165 
+_________TestCase: 23______________
+best num node = 191
+num.Node = 191.5 
+avg_time = 0.1912841796875 
+_________TestCase: 24______________
+best num node = 248
+num.Node = 250.0 
+avg_time = 0.4768890142440796 
+_________TestCase: 25______________
+best num node = 247
+num.Node = 259.0 
+avg_time = 0.8333349227905273 
+_________TestCase: 26______________
+best num node = 277
+num.Node = 279.0 
+avg_time = 1.3253865242004395 
+_________TestCase: 27______________
+best num node = 271
+num.Node = 274.0 
+avg_time = 1.921303153038025 
+_________TestCase: 28______________
+best num node = 264
+num.Node = 265.5 
+avg_time = 2.806250810623169 
+_________TestCase: 29______________
+best num node = 241
+num.Node = 243.0 
+avg_time = 3.689534902572632 
+_________TestCase: 30______________
+best num node = 266
+num.Node = 268.5 
+avg_time = 5.161167740821838 
+_________TestCase: 31______________
+best num node = 250
+num.Node = 261.0 
+avg_time = 6.719636082649231 
+_________TestCase: 32______________
+best num node = 249
+num.Node = 252.5 
+avg_time = 8.320736646652222 
+_________TestCase: 33______________
+best num node = 248
+num.Node = 248.5 
+avg_time = 10.142738819122314 
