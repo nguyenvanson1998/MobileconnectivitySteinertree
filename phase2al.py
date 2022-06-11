@@ -1,4 +1,6 @@
-from multiprocessing.managers import Server
+from unittest import result
+
+from tables import Description
 from phase1al import solve
 from clustering import get_optimal_numcluster, visualize_2d
 import itertools
@@ -9,7 +11,7 @@ import networkx as nx
 import logging
 import math
 import time
-from networkx.algorithms.shortest_paths import weighted
+from tqdm import tqdm
 from networkx.algorithms.approximation.steinertree import steiner_tree
 
 logging.getLogger('file_handler').addHandler(logging.NullHandler())
@@ -201,24 +203,30 @@ def solvep2(in_path:str):
       
     # return  len(final_node), end_time
 
-f = open("./result_check.txt", "a")
-for i in range(23,34):
-    print("Start test {}".format(i))
+f = open("./result_get_new.txt", "a")
+for i in tqdm(range(5,34),desc=" Instance: "):
+    print("\nStart test {}".format(i))
     avg_node, avg_time = 0,0
     f.write("_________TestCase: {}______________\n".format(i))
     best = 1000000
-    for j in range(1):
+    result = []
+    num_runs = 30
+    for j in tqdm(range(num_runs), desc = "Iter: "):
         num_node, end_time = solvep2('./Testnew/'+ str(i)+'.inp')
         if num_node < best:
             best = num_node
-        avg_node += num_node/1
-        avg_time += end_time/1
+        result.append(num_node)
+        avg_node += num_node/num_runs
+        avg_time += end_time/num_runs
     print('num.Node = {} '.format(avg_node))
     print('avg_time = {} '.format(avg_time))
     print('best = {}'.format(best))
+    f.write('')
     f.write('best num node = {}\n'.format(best))
     f.write('num.Node = {} \n'.format(avg_node))
     f.write('avg_time = {} \n'.format(avg_time))
+    f.write(f"The nodes:{result} \n")
+    f.flush()
     print("Done........")
 
 f.close()
