@@ -1,17 +1,17 @@
 # clustering using hierarchy
-from contextlib import nullcontext
-import pandas as pd
+# from contextlib import nullcontext
+# import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn.decomposition import PCA
+# from sklearn.decomposition import PCA
 from sklearn.cluster import AgglomerativeClustering
 from sklearn.preprocessing import StandardScaler, normalize
 from sklearn.metrics import silhouette_score
 import scipy.cluster.hierarchy as shc
 
-from matplotlib.pyplot import figure as fig
+# from matplotlib.pyplot import figure as fig
 from matplotlib import pyplot as plt
-import matplotlib
+# import matplotlib
 
 def visualize_tree(list_points):
     arr = []
