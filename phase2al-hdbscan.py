@@ -167,8 +167,11 @@ def solvep2(in_path:str):
         for j in range(len(anchor_points)):
             if labels[j] == -1:
                 set_cluster.append([anchor_points[j]])
-
-        for i in range(0,num_cluster -1):
+        if -1 in set(labels):
+            remain_cluster = num_cluster -1
+        else:
+            remain_cluster = num_cluster
+        for i in range(0,remain_cluster):
             point_in_clusters = []
             for j in range(len(anchor_points)):
                 if labels[j] == i:
@@ -185,6 +188,8 @@ def solvep2(in_path:str):
         # print(f"This is len of achorpoints {len(anchor_points)}")
         
         set_node_in_each_clusters  =  [steiner_tree_1(points, R) for points in set_cluster]
+        # print(f'achor_points = {anchor_points}')
+        # print(f'set_cluster = {set_cluster}')
         # for i, anchor in enumerate(anchor_points):
         #     check = False
         #     for relaynodes in set_node_in_each_clusters:
@@ -194,6 +199,7 @@ def solvep2(in_path:str):
         #                 break
         #     if check == False:
         #         print(f"\n Ancho {i} not connected")
+        # print(f' The len of set_cluster = {len(set_cluster)}')
         # for i, list_point in enumerate(set_cluster):
         #     check = False
         #     for point in list_point:
@@ -214,7 +220,7 @@ def solvep2(in_path:str):
                     set_node_in_each_clusters[i] = set_node_in_each_clusters[i] + set_node_in_each_clusters[j]
                     set_node_in_each_clusters[j] = []
 
-        # checking empty list
+        # checking empty list and remove
         set_node_in_each_clusters = [sublist for sublist in set_node_in_each_clusters if sublist]
         # for setx in set_node_in_each_clusters:
         #     if (len(setx) ==0):
@@ -234,6 +240,7 @@ def solvep2(in_path:str):
         
         # Concat the cluster to each other:
         T = nx.minimum_spanning_tree(G)
+        # print(T.edges)
         # print(set_node_in_each_clusters)
         add_node = []
         for edge in T.edges:
@@ -244,8 +251,7 @@ def solvep2(in_path:str):
 
             
 
-
-
+        # print(set_node_in_each_clusters)
         for set_node in set_node_in_each_clusters:
             add_node += set_node
     
@@ -279,13 +285,14 @@ def solvep2(in_path:str):
     G1 = nx.Graph()
     for i in range(len(all_node)-1):
         for j in range(i+1, len(all_node)):
-            if i >= len(cars) or j>=len(cars):
-                if distance(all_node[i], all_node[j]) <= 2*R + 0.1:
+            if (i >= len(cars)) or (j>=len(cars)):
+                if distance(all_node[i], all_node[j]) <= 2*R + 1e-3:
                     G1.add_edge(i,j, weight=1)
             else:
-                if all_node[i][3] == all_node[j][3]  and distance(all_node[i], all_node[j]) <= 2*R + 0.1 :
+                # print(f'{all_node[i][3]}, and {all_node[j][3]}')
+                if (all_node[i][3] == all_node[j][3])  and (distance(all_node[i], all_node[j])) <= 2*R + 1e-3 :
                     G1.add_edge(i,j, weight=1)
-    #print(nx.number_connected_components(G1))
+    # print(nx.number_connected_components(G1))
     # print(G1.edges)
     ter = [idx for idx in range(len(cars)+1)]
     H = steiner_tree(G1,ter, weight="weight")
@@ -336,9 +343,9 @@ def solver(i):
     avg_node, avg_time,avg_total_e,avg_denta_e = 0,0,0,0
     best,best_totale,best_denta_e = 1000000,100000,100000
     result = []
-    num_runs = 20
-    for j in tqdm(range(num_runs), desc = "Iter: "):
-        num_node, total_e, denta_e ,end_time = solvep2('./Testnew/'+ str(i)+'.inp')
+    num_runs = 30
+    for j in tqdm(range(num_runs), desc = f"Test case: {i} "):
+        num_node, total_e, denta_e ,end_time = solvep2('./Testmip/Test'+ str(i)+'.inp')
         # num_node = solvep2(f'./Testnew/{i}.inp')
         # print(num_node)
         if num_node < best:
@@ -372,6 +379,9 @@ def solver(i):
     return i
 
 if __name__ == '__main__':
-    list_instance = list(range(6,34))
+    list_instance = list(range(1,19))
+    # for i in list_instance:
+    #     solver(i)
+    # solver(9)
     with Pool(30) as p:
         results = list(tqdm(p.imap(solver, list_instance), total=len(list_instance)))
